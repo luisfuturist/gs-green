@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "ostream": "c"
+    },
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "gs-green",
+            "group": "gs-green",
+            "database": "gsg_database",
+            "username": "your_username",
+            "password": "your_password"
+        }
+    ]
+}

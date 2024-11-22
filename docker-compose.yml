@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres:15  # Use the desired version of PostgreSQL
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: gsg_database
+    ports:
+      - "5432:5432"  # Maps PostgreSQL's default port
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persistent storage for PostgreSQL data
+
+volumes:
+  postgres_data:
