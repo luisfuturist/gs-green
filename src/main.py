@@ -1,6 +1,7 @@
 import requests
 import os
 from save_to_db import save_data_to_db
+from analyse_data import calculate_per_capita_consumption, get_trend_data
 
 API_URL = "https://dadosabertos.aneel.gov.br/api/3/action/datastore_search"
 RESOURCE_ID = "ff80dd21-eade-4eb5-9ca8-d802c883940e"
@@ -39,16 +40,25 @@ def fetch_weather_data():
 
 if __name__ == "__main__":
     aneel_data = fetch_aneel_data(limit=10)
+        
+    print("\n--- ANEEL Energy Data ---")
     
     if aneel_data:
         save_data_to_db(aneel_data)
     else:
         print("No energy data to save.")
 
+    print("\n")
+
+    print("\n ANEEL Energy Data Analysis")
+    calculate_per_capita_consumption()
+    get_trend_data()
+    print("\n")
+
     weather_data = fetch_weather_data()
 
     if weather_data:
-        print("--- Weather Data ---")
+        print("\n--- Weather Data ---")
         print(f"Coordinates: {weather_data['coord']['lon']}, {weather_data['coord']['lat']}")
         print(f"Country: {weather_data['sys']['country']}")
         print(f"City: {weather_data['name']}")
@@ -66,3 +76,5 @@ if __name__ == "__main__":
         print(f"Sunset: {weather_data['sys']['sunset']}")
     else:
         print("No weather data to display.")
+
+    print("\n")

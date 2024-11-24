@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from dotenv import load_dotenv
 import os
+import logging
 
 # Load environment variables from .env file
 load_dotenv()
@@ -16,3 +17,5 @@ engine = create_engine(DATABASE_URL, echo=True)
 
 # Create session
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+logging.getLogger('sqlalchemy.engine.Engine').setLevel(logging.WARNING)

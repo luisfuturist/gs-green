@@ -15,7 +15,7 @@
 - [x] Collect energy consumption data from government sources.
 - [x] Store the data in a relational database.
 - [x] Create database objects to analyze trends in energy consumption.
-- [ ] Develop a pipeline to filter and analyze energy demand data for Brazil, focusing on per capita consumption and other relevant metrics.
+- [x] Develop a pipeline to filter and analyze energy demand data for Brazil, focusing on per capita consumption and other relevant metrics.
 
 ## Go Beyond - 1/3
 - [x] Integrate the Python system with the CDS database.
