@@ -3,13 +3,13 @@
 ## Artificial Intelligence Challenges (AIC) - 1/3
 - [x] Read and understand the article on energy consumption optimization (https://www.sciencedirect.com/science/article/pii/S2666546822000544).
 - [x] Propose a solution using AI, IoT, Big Data, and other technologies based on insights from the article.
-- [ ] Create the project document:
+- [x] Create the project document:
   - [x] Add names of team members and a team logo (optional) on the first page.
   - [x] Introduction: Contextualize the theme, objectives, challenges, barriers.
   - [x] Development: Justify the use of technologies, explain how and why each technology is adopted, and include a diagram if necessary.
   - [x] Results Expected: Estimate energy savings (e.g., for a household appliance), impact on comfort, equipment use, and lifespan.
   - [x] Conclusion: Summarize development and expected results.
-  - [ ] Generate the PDF.
+  - [x] Generate the PDF.
 - [x] Optionally add additional titles or subsections to the document.
 
 ## Cognitive Data Science (CDS) - 1/3

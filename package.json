@@ -1,0 +1,10 @@
+{
+    "scripts": {
+      "pdf": "md-to-pdf document.md"
+    },
+    "dependencies": {
+      "md-to-pdf": "^5.2.4",
+      "puppeteer": "^23.5.0"
+    }
+  }
+  
