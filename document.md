@@ -1,59 +1,80 @@
-# Global Solution - Green Energy: Optimizing Energy Consumption using Weather Data
+# Global Solution - Green Energy: Optimizing Energy Consumption Using Weather Data
 
-**Team Members:** [Luis Emidio RM559976](https://www.linkedin.com/in/luisfuturist)
+**Team Member:** [Luis Emidio RM559976](https://www.linkedin.com/in/luisfuturist)
 
-> This project is part of the **Artificial Intelligence** course at [FIAP](https://github.com/fiap) - Online 2024. This project is the **Global Solution - Green Energy**.
+> This project is part of the **Artificial Intelligence** course at [FIAP](https://github.com/fiap) - Online 2024. It serves as the **Global Solution - Green Energy** project.
 
-It consists of a selection of three items from the project instructions. We have chosen the following items:
+The project involves selecting three items from the provided project instructions. We chose the following:
 
-- Artificial Intelligence Challenges (AIC)
-- Cognitive Data Science (CDS)
-- Go Beyond
+- Artificial Intelligence Challenges (AIC)  
+- Cognitive Data Science (CDS)  
+- Go Beyond  
 
-You can access the project files in the `./files` directory on the FIAP Platform submission or on GitHub at: [GS-Green](https://github.com/luisfuturist/gs-green).
+Project files can be accessed in the `./files` directory on the FIAP Platform submission or via GitHub: [GS-Green](https://github.com/luisfuturist/gs-green).
+
+---
 
 ## Abstract
 
-This project explores the optimization of energy consumption using the analysis of weather data. We leverage publicly available energy consumption data from the Brazilian Energy Regulatory Agency (ANEEL) and weather data from OpenWeatherMap to develop a solution that identifies potential areas for improvement. This document details the data acquisition, processing, and expected results of our solution.
+This project focuses on optimizing energy consumption by analyzing weather data. Publicly available energy consumption data from the Brazilian Energy Regulatory Agency (ANEEL) and weather data from OpenWeatherMap are used to develop a solution that identifies opportunities for improvement. This document outlines the data acquisition, processing steps, and the expected outcomes of our solution.
+
+---
 
 ## 1. Introduction
 
-**1.1 Context:** Global energy consumption is a significant contributor to environmental challenges. Optimizing energy usage is crucial for mitigating climate change and promoting sustainable development. Brazil, with its vast and diverse energy landscape, presents a prime case study for exploring energy efficiency improvements.
+### **1.1 Context**  
+Global energy consumption significantly contributes to environmental challenges. Optimizing energy usage is crucial to mitigating climate change and promoting sustainable development. Brazil’s diverse energy landscape provides an excellent case study for exploring energy efficiency strategies.  
 
-**1.2 Objectives:** Our primary objective is to develop a system that accurately register energy consumption in Brazil and identifies strategies for optimization. This involves leveraging publicly available data, implementing advanced analytics, and exploring the potential of AI and IoT technologies.
+### **1.2 Objectives**  
+The primary goal of this project is to develop a system that accurately records energy consumption in Brazil and identifies optimization strategies. This involves using publicly available data, implementing advanced analytics, and exploring the potential of AI and IoT technologies.  
 
-**1.3 Challenges:** Acquiring and processing large datasets from diverse sources presents a significant challenge. Ensuring data quality, handling missing values, and managing data inconsistencies requires careful consideration. Developing real-time integration that account for various factors (weather, seasonal variations, consumption patterns) is another key challenge.
+### **1.3 Challenges**  
+Key challenges include acquiring and processing large datasets from multiple sources. Ensuring data quality, handling missing values, and managing inconsistencies are critical. Additionally, building real-time integrations that account for factors like weather, seasonal variations, and consumption patterns presents a significant technical hurdle.  
 
-**1.4 Barriers:** Data limitations (e.g., incomplete datasets, lack of granular data) can impact the solution. The integration of IoT devices for real-time data acquisition may require significant infrastructural investments. Ensuring data privacy and security is also a crucial consideration.
+### **1.4 Barriers**  
+Data limitations, such as incomplete or insufficiently granular datasets, can affect solution accuracy. Integrating IoT devices for real-time data collection may require substantial infrastructure investment. Furthermore, ensuring data privacy and security is essential.  
+
+---
 
 ## 2. Development
 
-### 2.1 Data Acquisition
+### **2.1 Data Acquisition**  
 
-* **ANEEL Data:** We utilized the ANEEL open data API to retrieve historical energy consumption data for Brazil. This data includes various metrics, such as total energy consumption, consumption by sector, and tariff classifications. The data was initially stored in a relational database (PostgreSQL).
-* **OpenWeatherMap Data:** Weather data (temperature, humidity, wind speed, etc.) from OpenWeatherMap API were incorporated to explore correlations with energy consumption patterns. This data is crucial for improving the accuracy of the solution.
+- **ANEEL Data:** Historical energy consumption data was retrieved from ANEEL's open data API. Metrics include total consumption, sector-specific data, and tariff classifications. The data was stored in a PostgreSQL database.  
+- **OpenWeatherMap Data:** Weather data (e.g., temperature, humidity, wind speed) was obtained from OpenWeatherMap's API. This data was used to explore correlations with energy consumption patterns, improving solution accuracy.  
 
-### 2.2 Data Processing and Storage
+### **2.2 Data Processing and Storage**  
 
-* **Database:** A PostgreSQL database was used to store and manage the energy consumption. This allows for efficient data retrieval and analysis.
-* **Data Cleaning:** The raw data underwent preprocessing steps to handle missing values, outliers, and inconsistencies. Data transformations (e.g., normalization, scaling) were performed as needed for our solution.
+- **Database:** A PostgreSQL database was used to store and manage energy consumption data for efficient analysis and retrieval.  
+- **Data Cleaning:** Raw data was preprocessed to handle missing values, outliers, and inconsistencies. Transformations such as normalization and scaling were applied to ensure compatibility with our solution.  
 
-### 2.3 Analysis Scripts
+### **2.3 Analysis Scripts**  
 
-Python scripts analyze data from the PostgreSQL database. `analyse_data.py` calculates per capita consumption and identifies trends. Results are visualized for the report. More advanced time series analysis could be added.
+Python scripts were developed to analyze data stored in the PostgreSQL database. The script `analyse_data.py` calculates per capita consumption and identifies trends. Results are visualized for reporting purposes. Future iterations may include more advanced time series analysis.
 
-## 3. Results Expected
+---
 
-- **3.1 Energy Savings:** We anticipate a reduction in energy consumption for utilities through optimized settings based on reactivity of external temperature and weather data. This is based on the ability to accurately notify the need for adjustments, such as turning off the lights.
+## 3. Expected Results
 
-- **3.2 Impact on Comfort:** Real-time weather data allows proactive appliance adjustments (pre-cooling/heating), maintaining comfort by mitigating the impact of temperature swings and reducing energy waste.
+### **3.1 Energy Savings**  
+Optimized energy consumption settings, informed by weather data, are expected to reduce energy use. For instance, external temperature data can trigger notifications for adjustments, such as turning off lights when unnecessary.  
 
-**3.3 Equipment Use:** Optimized settings will likely lead to reduced compressor runtime for the household utilities, decreasing wear and tear on the equipment.
+### **3.2 Impact on Comfort**  
+Real-time weather data enables proactive appliance adjustments (e.g., pre-cooling or heating), maintaining comfort while minimizing energy waste.  
 
-**3.4 Lifespan:** Reduced stress on the household utilities due to optimized operation may potentially extend its lifespan. This is a longer-term effect requiring further investigation.
+### **3.3 Equipment Usage**  
+Optimized settings are likely to reduce compressor runtimes in household utilities, decreasing wear and tear on equipment.  
 
-**3.5 Data Visualization:** Future plans include interactive dashboards visualizing real-time predictions and regional consumption patterns, overlaid with weather data, and scenario planning tools to simulate optimization strategies.
+### **3.4 Lifespan Improvement**  
+Reduced operational stress on household utilities could potentially extend their lifespan. This long-term effect warrants further investigation.  
 
-## 4. Conclusion
+### **3.5 Data Visualization**  
+Future plans include interactive dashboards displaying real-time predictions, regional consumption patterns, and weather overlays. Scenario planning tools will also simulate optimization strategies.  
 
-This project successfully demonstrated the potential of Technology in optimizing energy consumption. Our solution idea provides accurate reading of energy usage, allowing for targeted interventions to reduce consumption. Further research could focus on integrating real-time data for more refined implementation and incorporating additional factors (e.g., user behavior) to enhance the efficiency. The results suggest a significant potential for energy savings and improved sustainability through smart energy management. The limitations of this project are data availability and integration complexity. Future work will include steps such as adding new data sources, improving performance and real-time integration.
+---
+
+## 4. Conclusion  
+
+This project demonstrates the potential of technology to optimize energy consumption. The proposed solution offers accurate energy usage insights, enabling targeted interventions for reduction. Further research could focus on integrating real-time data and incorporating additional factors, such as user behavior, to enhance efficiency.  
+
+Although limitations such as data availability and integration complexity exist, the project shows promise in achieving significant energy savings and improving sustainability through smart energy management. Future work will address these limitations by adding new data sources, enhancing performance, and improving real-time integration.  
