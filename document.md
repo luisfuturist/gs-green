@@ -1,74 +1,59 @@
-# Energy Outage Prediction for Residential Optimization  
-**Integrating Climate Data for Prevention and Energy Efficiency**  
+# Global Solution - Green Energy: Optimizing Energy Consumption using Weather Data
 
----
+**Team Members:** [Luis Emidio RM559976](https://www.linkedin.com/in/luisfuturist)
 
-## **Introduction**  
+> This project is part of the **Artificial Intelligence** course at [FIAP](https://github.com/fiap) - Online 2024. This project is the **Global Solution - Green Energy**.
 
-Efficient electricity consumption in households depends not only on user behavior but also on anticipating failures in the electrical grid. Power outages disrupt daily life and incur costs due to equipment damage and energy losses during recovery. This document proposes a simplified yet effective solution for predicting power outages using climate data. By analyzing weather patterns with AI, the system aims to anticipate failures and optimize energy usage.  
+It consists of a selection of three items from the project instructions. We have chosen the following items:
 
-### **Objectives**  
-- Predict power outages using climate data.  
-- Leverage AI to analyze weather patterns and enable preventive actions.  
-- Provide flexible integration options for users and companies.  
+- Artificial Intelligence Challenges (AIC)
+- Cognitive Data Science (CDS)
+- Go Beyond
 
-### **Challenges**  
-- Collecting and integrating real-time climate data.  
-- Efficiently processing and analyzing weather data.  
-- Balancing system performance with affordability.  
+You can access the project files in the `./files` directory on the FIAP Platform submission or on GitHub at: [GS-Green](https://github.com/luisfuturist/gs-green).
 
----
+## Abstract
 
-## **Solution Overview**  
+This project explores the optimization of energy consumption using the analysis of weather data. We leverage publicly available energy consumption data from the Brazilian Energy Regulatory Agency (ANEEL) and weather data from OpenWeatherMap to develop a solution that identifies potential areas for improvement. This document details the data acquisition, processing, and expected results of our solution.
 
-The proposed solution integrates real-time climate data and machine learning to build a predictive system that identifies potential power outages. It focuses on delivering alerts via webhooks, empowering users and companies to create custom responses.  
+## 1. Introduction
 
-### **1. Climate Data Integration**  
-Real-time weather data such as temperature, humidity, wind speed, and storm warnings is gathered through publicly available APIs like OpenWeatherMap. Historical climate patterns are also incorporated to improve prediction accuracy.  
+**1.1 Context:** Global energy consumption is a significant contributor to environmental challenges. Optimizing energy usage is crucial for mitigating climate change and promoting sustainable development. Brazil, with its vast and diverse energy landscape, presents a prime case study for exploring energy efficiency improvements.
 
-### **2. Artificial Intelligence (AI) Model**  
-A machine learning model identifies correlations between climate variables and power outages. Algorithms from libraries like Scikit-learn, such as Random Forests or SVMs, are used for early testing, while neural networks can be introduced as data volume increases.  
+**1.2 Objectives:** Our primary objective is to develop a system that accurately register energy consumption in Brazil and identifies strategies for optimization. This involves leveraging publicly available data, implementing advanced analytics, and exploring the potential of AI and IoT technologies.
 
-### **3. Real-time Cloud Processing**  
-Cloud computing ensures real-time processing of data. Anomaly detection identifies immediate risks, such as sudden increases in wind speed or extreme temperatures.  
+**1.3 Challenges:** Acquiring and processing large datasets from diverse sources presents a significant challenge. Ensuring data quality, handling missing values, and managing data inconsistencies requires careful consideration. Developing real-time integration that account for various factors (weather, seasonal variations, consumption patterns) is another key challenge.
 
-### **4. Webhook-based Alert Delivery**  
-Instead of directly controlling devices, the system sends predictive outage alerts to users or companies via webhooks, allowing them to create tailored responses:  
-- **Customizable Alerts:** Alerts include metadata such as severity levels (e.g., “Warning” or “Critical”), expected outage times, and associated weather conditions.  
-- **Webhook Integration:** Organizations can subscribe to webhook events to trigger automated workflows, such as powering down sensitive equipment or activating backup systems.  
-- **Open API Support:** Developers can use a RESTful or GraphQL API to fetch prediction data for integration with custom dashboards or monitoring tools.  
+**1.4 Barriers:** Data limitations (e.g., incomplete datasets, lack of granular data) can impact the solution. The integration of IoT devices for real-time data acquisition may require significant infrastructural investments. Ensuring data privacy and security is also a crucial consideration.
 
-### **5. Cloud Integration**  
-Cloud platforms such as AWS or Google Cloud support long-term data storage and periodic updates to the AI model. This enables continuous learning and improves prediction accuracy.  
+## 2. Development
 
----
+### 2.1 Data Acquisition
 
-## **System Workflow**  
+* **ANEEL Data:** We utilized the ANEEL open data API to retrieve historical energy consumption data for Brazil. This data includes various metrics, such as total energy consumption, consumption by sector, and tariff classifications. The data was initially stored in a relational database (PostgreSQL).
+* **OpenWeatherMap Data:** Weather data (temperature, humidity, wind speed, etc.) from OpenWeatherMap API were incorporated to explore correlations with energy consumption patterns. This data is crucial for improving the accuracy of the solution.
 
-```plaintext
-Climate Data → Cloud Processing → ML Prediction Model → Webhook Delivery → User/Company Integration  
-```  
+### 2.2 Data Processing and Storage
 
-### Key Features:  
-- **Real-time Alerts via Webhooks:** Enables users and companies to define custom responses to outage predictions.  
-- **Scalable Integration:** Supports integration with smart home hubs, industrial IoT systems, and enterprise monitoring platforms.  
-- **Open APIs for Customization:** Provides flexibility for developers to create tailored energy optimization or outage prevention solutions.  
+* **Database:** A PostgreSQL database was used to store and manage the energy consumption. This allows for efficient data retrieval and analysis.
+* **Data Cleaning:** The raw data underwent preprocessing steps to handle missing values, outliers, and inconsistencies. Data transformations (e.g., normalization, scaling) were performed as needed for our solution.
 
----
+### 2.3 Analysis Scripts
 
-## **Expected Results**  
+Python scripts analyze data from the PostgreSQL database. `analyse_data.py` calculates per capita consumption and identifies trends. Results are visualized for the report. More advanced time series analysis could be added.
 
-### **1. Energy Savings**  
-By anticipating outages and enabling automated responses, the system can reduce energy waste. For instance, during storm forecasts, companies can redistribute loads to prevent equipment damage.  
+## 3. Results Expected
 
-### **2. Improved User Comfort**  
-The system ensures critical devices, such as refrigerators and lighting, remain functional during outages. Alerts allow residents to manually or automatically prioritize essential appliances.  
+- **3.1 Energy Savings:** We anticipate a reduction in energy consumption for utilities through optimized settings based on reactivity of external temperature and weather data. This is based on the ability to accurately notify the need for adjustments, such as turning off the lights.
 
-### **3. Financial Benefits**  
-Predictive maintenance reduces costs associated with equipment damage and grid failures. Continuous monitoring extends the lifespan of household devices by protecting them from power surges.  
+- **3.2 Impact on Comfort:** Real-time weather data allows proactive appliance adjustments (pre-cooling/heating), maintaining comfort by mitigating the impact of temperature swings and reducing energy waste.
 
----
+**3.3 Equipment Use:** Optimized settings will likely lead to reduced compressor runtime for the household utilities, decreasing wear and tear on the equipment.
 
-## **Conclusion**  
+**3.4 Lifespan:** Reduced stress on the household utilities due to optimized operation may potentially extend its lifespan. This is a longer-term effect requiring further investigation.
 
-This energy outage prediction system leverages climate data, AI, and webhook-based notifications to provide flexible and actionable insights for users and companies. By focusing on delivering real-time alerts and integration capabilities, the solution empowers stakeholders to tailor their responses, leading to improved energy efficiency, cost savings, and comfort. This marks a step toward more sustainable and intelligent residential energy management.  
+**3.5 Data Visualization:** Future plans include interactive dashboards visualizing real-time predictions and regional consumption patterns, overlaid with weather data, and scenario planning tools to simulate optimization strategies.
+
+## 4. Conclusion
+
+This project successfully demonstrated the potential of Technology in optimizing energy consumption. Our solution idea provides accurate reading of energy usage, allowing for targeted interventions to reduce consumption. Further research could focus on integrating real-time data for more refined implementation and incorporating additional factors (e.g., user behavior) to enhance the efficiency. The results suggest a significant potential for energy savings and improved sustainability through smart energy management. The limitations of this project are data availability and integration complexity. Future work will include steps such as adding new data sources, improving performance and real-time integration.
