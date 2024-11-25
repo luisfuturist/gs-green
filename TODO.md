@@ -23,5 +23,5 @@
 - [x] Incorporate data from the AICSS solution into the Python system.
 
 ## Submission
-- [ ] Submit the final PDF.
-- [ ] Submit the repository files.
+- [x] Submit the final PDF.
+- [x] Submit the repository files.
